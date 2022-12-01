@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+html, body{
+	margin:0;
+	padding:0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  height:100px;
+}
+.main-div{
+    height:100vh;
+    width:100vw;
+    cursor:pointer;
+}
+img{
+	display:block;
+}
+.image-overlay-container{
+    height:100vh;
+    width:100vw;
+    position:absolute;
+	background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    text-align:center;
+	align-items: center;
+    
+}
+.image-overlay-container p{
+    color:white;
+    font-size:80px;
+    margin:0;
+}
+.inner-sec{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inner-sec button {
+    color: #fff;
+    background: #99b6e0;
+    border: 2px solid #99b6e0;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 24px;
+}
+.inner-sec button:hover {
+    background: transparent;
+    border: 2px solid #99b6e0;
+    color: #99b6e0;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  height:100px;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+ 
+}
+</style>
+</head>
+<body>
+	<header>
+	  <h2>Header</h2>
+	</header>
+	<!-- this is the main structure where I display the image with overlay -->
+	<div class="main-div"><!-- main div - set the width and height 100% to display the full screen -->
+		<div class='image-overlay-container'> <!-- adding this div for overlay the image with gredient color -->
+			<div class="inner-sec"> <!-- this div I have used to manage Hello world text and button -->
+				<p>Hello World</p>
+				<button onclick="clickMe()">Click Here</button>			
+			</div>
+		</div>
+		<img src="images/image-1.jpg" alt="Trulli" width="100%" height="100%"> <!-- I have provide image width and height attribute for display the full screen image -->
+	</div>
+	
+	<!-- added footer for display the footer and set css height 100px as per the instruction -->
+	<footer>
+		
+	  <p>Footer</p>
+	</footer>
+
+<script>
+	/* wrote a funciton for onclick event, it display the "hello world" after clicking the button*/
+	function clickMe(){
+		alert("Hello Wordld");
+	}
+</script>
+
+</body>
+</html>
+
+
